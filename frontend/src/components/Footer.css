@@ -1,0 +1,87 @@
+/* ===============================
+   🌙 FOOTER
+================================ */
+.footer {
+  background: linear-gradient(135deg, #0f6ab5, #3ea0e9);
+  padding: 40px 20px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative soft circles */
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 1;
+}
+
+.footer::before {
+  width: 180px;
+  height: 180px;
+  top: -40px;
+  left: -20px;
+}
+
+.footer::after {
+  width: 220px;
+  height: 220px;
+  bottom: -50px;
+  right: -10px;
+}
+
+/* Text */
+.footer p {
+  position: relative;
+  z-index: 2;
+  margin: 6px 0;
+  font-size: 15px;
+  opacity: 0.95;
+}
+
+.footer-sub {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+/* Divider line */
+.footer-line {
+  width: 70%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 12px auto;
+  border-radius: 4px;
+}
+
+/* Hover glow effect */
+.footer p:hover {
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  transition: 0.25s ease;
+}
+
+/* ===============================
+   📱 RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .footer {
+    padding: 35px 15px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer-sub {
+    font-size: 12.5px;
+  }
+
+  .footer-line {
+    width: 85%;
+  }
+}

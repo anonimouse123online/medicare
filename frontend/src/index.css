@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f4f8fc;
+  color: #333;
+}
+
+.page-container {
+  padding: 40px 60px;
+}
+
+/* Smooth transitions everywhere */
+* {
+  transition: 0.15s ease;
+}

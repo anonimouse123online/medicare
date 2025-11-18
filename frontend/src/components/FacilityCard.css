@@ -1,0 +1,112 @@
+/* ==========================================================
+   📱 MOBILE-FIRST FLUID RESPONSIVE
+   All spacing and fonts adapt to device viewport
+========================================================== */
+
+/* Base card */
+.facility-card {
+  padding: 4vw;
+  border-radius: 2vw;
+  margin-bottom: 4vw;
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.facility-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: flex-start;
+}
+
+/* Name & type */
+.facility-name {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: 600;
+}
+
+.facility-type {
+  font-size: clamp(0.65rem, 3vw, 0.85rem);
+  padding: 0.5vw 2vw;
+  border-radius: 1.5vw;
+}
+
+/* Info items */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  padding: 1vw 0;
+}
+
+.info-item .icon {
+  font-size: clamp(0.8rem, 4vw, 1.2rem);
+  width: auto;
+}
+
+.info-item .text {
+  font-size: clamp(0.75rem, 3.5vw, 1rem);
+  line-height: 1.4;
+}
+
+/* Services list */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.service-tag {
+  padding: 1vw 2vw;
+  font-size: clamp(0.7rem, 3vw, 0.85rem);
+  border-radius: 1.5vw;
+}
+
+/* Actions */
+.facility-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 100%;
+}
+
+.action-btn {
+  padding: 2vw;
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  border-radius: 2vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional breakpoint tweaks for tablets and larger phones */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .facility-header {
+    flex-direction: row;
+    gap: 1.5vw;
+    align-items: center;
+  }
+
+  .facility-actions {
+    flex-direction: row;
+    gap: 1.5vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .facility-card {
+    width: 80%;
+    padding: 2vw 3vw;
+  }
+
+  .facility-header {
+    flex-direction: row;
+    gap: 1vw;
+  }
+
+  .facility-actions {
+    flex-direction: row;
+    gap: 1vw;
+  }
+}

@@ -1,0 +1,164 @@
+/* ===============================
+   🌟 NAVBAR (Fluid Responsive)
+================================ */
+.navbar {
+  width: 100%;
+  padding: clamp(1vw, 2vw, 18px) clamp(3vw, 4vw, 30px);
+  background: #0f6ab5;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  animation: fadeSlide 0.6s ease;
+}
+
+/* Logo */
+.logo {
+  font-size: clamp(18px, 4vw, 26px);
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+  transition: 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: clamp(2vw, 3vw, 35px);
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: clamp(14px, 2.5vw, 16px);
+  font-weight: 500;
+  padding: clamp(0.5vw, 1vw, 6px) clamp(1vw, 2vw, 10px);
+  border-radius: clamp(0.5vw, 1vw, 6px);
+  transition: 0.2s ease;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  width: clamp(20px, 5vw, 28px);
+  height: clamp(16px, 4vw, 22px);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: clamp(3px, 0.8vw, 4px);
+  background: white;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+/* Hamburger active state */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Back Button (Mobile only) */
+.back-btn-container {
+  display: none; /* hidden by default */
+}
+
+.back-btn {
+  background: #ffffff;
+  color: #0f6ab5;
+  border: none;
+  padding: clamp(8px, 1.5vw, 12px) clamp(14px, 3vw, 20px);
+  border-radius: clamp(6px, 1vw, 8px);
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #e9f4ff;
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: clamp(200px, 60vw, 260px);
+    background: #0f6ab5;
+    flex-direction: column;
+    padding-top: clamp(8vw, 10vw, 80px);
+    padding-left: clamp(4vw, 6vw, 25px);
+    gap: clamp(2vw, 4vw, 22px);
+    transition: 0.4s ease;
+    box-sizing: border-box;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li a {
+    font-size: clamp(16px, 4vw, 18px);
+  }
+
+  /* Show back button on mobile */
+  .back-btn-container {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .logo {
+    font-size: clamp(16px, 6vw, 20px);
+  }
+
+  .hamburger {
+    width: clamp(18px, 6vw, 24px);
+    height: clamp(14px, 5vw, 20px);
+  }
+}
+
+/* Extra Beauty: Fade-in Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,98 @@
+/* ===============================
+   🌟 SYMPTOM FORM (Fluid Responsive)
+================================ */
+.symptom-form {
+  background: #ffffff;
+  width: 90%;
+  max-width: 650px;
+  padding: clamp(15px, 3vw, 25px);
+  border-radius: clamp(8px, 2vw, 12px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin: 0 auto clamp(15px, 4vw, 20px);
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+.symptom-form h2 {
+  margin: 0 0 clamp(10px, 2vw, 15px);
+  color: #1C75BC;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+}
+
+.symptom-form textarea {
+  width: 100%;
+  height: clamp(100px, 20vw, 130px);
+  resize: none;
+  padding: clamp(10px, 2vw, 12px);
+  border-radius: clamp(8px, 2vw, 10px);
+  border: 1px solid #cfd8dc;
+  font-size: clamp(13px, 2.5vw, 15px);
+  line-height: 1.4;
+  outline: none;
+  transition: border 0.2s ease;
+  box-sizing: border-box;
+}
+
+.symptom-form textarea:focus {
+  border-color: #1C75BC;
+  box-shadow: 0 0 4px rgba(28, 117, 188, 0.2);
+}
+
+.symptom-form button {
+  width: 100%;
+  padding: clamp(9px, 2vw, 12px);
+  background: #1C75BC;
+  color: white;
+  border: none;
+  border-radius: clamp(8px, 2vw, 10px);
+  cursor: pointer;
+  font-size: clamp(13px, 3vw, 16px);
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.symptom-form button:hover:not(:disabled) {
+  background: #16659c;
+  transform: translateY(-2px);
+}
+
+.symptom-form button:disabled {
+  background: #90a4ae;
+  cursor: not-allowed;
+}
+
+.loading-indicator {
+  margin-top: clamp(8px, 2vw, 12px);
+  text-align: center;
+  color: #1C75BC;
+  font-size: clamp(12px, 3vw, 14px);
+  animation: fadePulse 1.2s infinite;
+}
+
+@keyframes fadePulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* ===============================
+   📱 RESPONSIVE (already fluid but extra tweaks)
+===================================== */
+@media (max-width: 900px) {
+  .symptom-form h2 { font-size: clamp(1.3rem, 4vw, 1.5rem); }
+  .symptom-form textarea { height: clamp(110px, 18vw, 120px); font-size: clamp(14px, 3vw, 14px); }
+  .symptom-form button { font-size: clamp(14px, 3vw, 15px); }
+}
+
+@media (max-width: 600px) {
+  .symptom-form h2 { font-size: clamp(1.2rem, 5vw, 1.35rem); }
+  .symptom-form textarea { height: clamp(100px, 18vw, 110px); }
+  .symptom-form button { font-size: clamp(13px, 4vw, 14px); }
+}
+
+@media (max-width: 400px) {
+  .symptom-form h2 { font-size: clamp(1rem, 6vw, 1.2rem); }
+  .symptom-form textarea { height: clamp(90px, 18vw, 100px); font-size: clamp(12px, 4vw, 13px); }
+  .symptom-form button { font-size: clamp(12px, 4vw, 13px); padding: clamp(8px, 2vw, 9px); }
+}

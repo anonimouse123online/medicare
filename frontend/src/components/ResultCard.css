@@ -1,0 +1,252 @@
+.health-analysis-card {
+  background: white;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
+  border: 1px solid #e2e6ea;
+  margin-bottom: 22px;
+  transition: all 0.25s ease;
+}
+
+.health-analysis-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.card-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.card-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #243447;
+  margin: 0 0 5px;
+}
+
+.card-subtitle {
+  color: #6c7a89;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Sections */
+.analysis-section {
+  margin-bottom: 18px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border-left: 5px solid #3498db;
+}
+
+.analysis-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.section-icon {
+  font-size: 1.25rem;
+}
+
+.section-header h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Section content */
+.section-content {
+  line-height: 1.6;
+  color: #3a4750;
+}
+
+.section-content.urgent {
+  color: #d63939;
+  font-weight: 600;
+}
+
+/* List items */
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bullet {
+  color: #3498db;
+  font-size: 1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.list-text {
+  flex: 1;
+}
+
+/* Key-value styling */
+.key-value {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.key-value strong {
+  min-width: 130px;
+  color: #2c3e50;
+}
+
+.paragraph {
+  margin: 0 0 12px 0;
+}
+
+/* Section-specific colors */
+.symptom-assessment {
+  border-left-color: #3498db;
+  background: #e9f4ff;
+}
+
+.possible-conditions {
+  border-left-color: #8e44ad;
+  background: #f5edfb;
+}
+
+.medications {
+  border-left-color: #f39c12;
+  background: #fff5dd;
+}
+
+.see-doctor {
+  border-left-color: #e67e22;
+  background: #fde8d4;
+}
+
+.self-care {
+  border-left-color: #2ecc71;
+  background: #e5fbf1;
+}
+
+.emergency-warning {
+  border-left-color: #e74c3c;
+  background: #ffe9e8;
+}
+
+.facilities {
+  border-left-color: #6e2bb5;
+  background: #f2e9ff;
+}
+
+.disclaimer {
+  border-left-color: #95a5a6;
+  background: #fafafa;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* ================================
+   📱 RESPONSIVE IMPROVEMENTS
+================================ */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .health-analysis-card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .analysis-section {
+    padding: 14px;
+  }
+
+  .section-header h4 {
+    font-size: 1.05rem;
+  }
+
+  .key-value {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .key-value strong {
+    min-width: auto;
+  }
+}
+
+/* Standard mobile */
+@media (max-width: 600px) {
+  .health-analysis-card {
+    padding: 18px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .analysis-section {
+    padding: 12px;
+  }
+
+  .section-header h4 {
+    font-size: 1rem;
+  }
+
+  .section-icon {
+    font-size: 1.15rem;
+  }
+
+  .list-text,
+  .paragraph,
+  .key-value span {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small / compact mobile */
+@media (max-width: 400px) {
+  .health-analysis-card {
+    padding: 14px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .analysis-section {
+    padding: 10px;
+  }
+
+  .section-header h4 {
+    font-size: 0.95rem;
+  }
+
+  .list-text,
+  .paragraph {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.health-analysis-card {
+  animation: fadeInUp 0.55s ease-out;
+}

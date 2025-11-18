@@ -1,0 +1,178 @@
+/* ===============================
+   🌟 HERO WRAPPER (Fully Fluid Responsive)
+================================ */
+.hero {
+  background: linear-gradient(135deg, #0f6ab5, #3ea0e9);
+  background-size: cover; /* ensure full coverage */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(6vw, 8vw, 130px) clamp(4vw, 5vw, 60px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Decorative circles */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.hero::before {
+  width: clamp(100px, 20vw, 260px);
+  height: clamp(100px, 20vw, 260px);
+  top: clamp(20px, 4vw, 40px);
+  right: clamp(20px, 8vw, 80px);
+}
+
+.hero::after {
+  width: clamp(80px, 15vw, 180px);
+  height: clamp(80px, 15vw, 180px);
+  bottom: clamp(20px, 4vw, 40px);
+  left: clamp(20px, 8vw, 60px);
+}
+
+/* Hero content */
+.hero-content {
+  max-width: 90%;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlide 0.9s ease forwards;
+  text-align: center;
+}
+
+/* ===============================
+   📝 TEXT STYLING
+================================ */
+.hero h1 {
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 800;
+  margin-bottom: 1.5em;
+  line-height: 1.15;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero p {
+  font-size: clamp(16px, 4vw, 22px);
+  margin-bottom: 2em;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+/* ===============================
+   🔘 BUTTONS
+================================ */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: clamp(10px, 2vw, 14px) clamp(18px, 4vw, 28px);
+  border-radius: clamp(8px, 2vw, 12px);
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 600;
+  transition: 0.25s ease;
+  min-width: 150px;
+  box-sizing: border-box;
+}
+
+/* Primary */
+.btn-primary {
+  background: #ffffff;
+  color: #0f6ab5;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary:hover {
+  background: #e9f4ff;
+  transform: translateY(-3px);
+}
+
+/* Secondary */
+.btn-secondary {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: #0f6ab5;
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   📱 RESPONSIVE
+================================ */
+
+/* Small tablets & large phones */
+@media (max-width: 900px) {
+  .hero {
+    padding: clamp(6vw, 8vw, 100px) clamp(4vw, 5vw, 40px);
+    min-height: auto;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .hero {
+    padding: clamp(6vw, 10vw, 90px) clamp(4vw, 8vw, 25px);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .hero::after,
+  .hero::before {
+    display: none;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 32px);
+  }
+
+  .hero p {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+}
+
+/* ===============================
+   ✨ Animation
+================================ */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
