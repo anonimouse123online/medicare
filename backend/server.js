@@ -4,18 +4,18 @@ const cors = require('cors');
 const app = express();
 const PORT = 8000;
 
-// Middleware
+
 app.use(cors({
     origin: ["http://localhost:5173", "http://localhost:3000"],
     credentials: true
 }));
 app.use(express.json());
 
-// Your Groq API Key
+
 const GROQ_API_KEY = "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";
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
-// Function to call Groq API
+
 async function queryGroq(prompt) {
     const modelsToTry = [
         "llama-3.2-1b-preview",
